@@ -1,6 +1,6 @@
 # NoDrop
 
-NoDrop Version 1.0.0
+NoDrop Version 1.0.1
 
 特定のアイテムがドロップされることを封じます。
 
@@ -24,7 +24,7 @@ give @s apple{data: ["no_drop"]}
 
 ## License
 
-NoDrop Version 1.0.0 is under [Mit license](https://en.wikipedia.org/wiki/MIT_License).
+NoDrop Version 1.0.1 is under [Mit license](https://en.wikipedia.org/wiki/MIT_License).
 
 ## Author
 
