@@ -1,8 +1,11 @@
 # NoDrop
 
-NoDrop Version 1.0.0
+NoDrop Version 1.0.2
 
 特定のアイテムがドロップされることを封じます。
+
+**赤石愛様の「Oh! My Dat!」を使用しています。**
+**このデータパックには含まれていないため、別で導入してください。**
 
 ## Usage
 
@@ -27,7 +30,7 @@ give @s apple{data: ["no_drop"]}
 
 ## License
 
-NoDrop Version 1.0.0 is under [Mit license](https://en.wikipedia.org/wiki/MIT_License).
+NoDrop Version 1.0.2 is under [Mit license](https://en.wikipedia.org/wiki/MIT_License).
 
 ## Author
 
