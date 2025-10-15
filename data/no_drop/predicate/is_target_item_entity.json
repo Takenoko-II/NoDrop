@@ -1,0 +1,16 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "type": "item",
+        "slots": {
+            "contents": {
+                "predicates": {
+                    "custom_data": {
+                        "no_drop": {}
+                    }
+                }
+            }
+        }
+    }
+}

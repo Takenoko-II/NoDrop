@@ -1,6 +1,10 @@
 {
     "pack": {
-        "pack_format": 10,
-        "description": "NoDrop - @Takenoko-II"
+        "min_format": 88,
+        "max_format": 88,
+        "description": {
+            "text": "NoDrop - @Takenoko-II",
+            "color": "light_purple"
+        }
     }
 }

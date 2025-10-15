@@ -1,36 +1,17 @@
 # NoDrop
 
-NoDrop Version 1.0.2
+NoDrop Version -
 
 特定のアイテムがドロップされることを封じます。
-
-**赤石愛様の「Oh! My Dat!」を使用しています。**
-**このデータパックには含まれていないため、別で導入してください。**
-
 ## Usage
-
-データタグが data: ["no_drop"] であるアイテムのドロップが封じられます。
-
-例：
-```mcfunction
-give @s apple{data: ["no_drop"]}
-```
-
-対象となるアイテムの条件は [predicate](/data/no_drop/predicates/target.json) にて変更できます。
 
 ## Compatible Versions
 
-- 1.20.2
-
 ## Note
 
-- クリエイティブモードでの使用はバグが頻発します。Minecraft側の問題ですのでこちらでは対処できません。
-
-- ドラッグして投げるなどするとgiveと同様の挙動でアイテムが戻ってきます。
+- クラフトスロットから投げるときの対策だけ本当にできない inventory_changedは発火しない、毎ティックカーソルを保存しようとすると進捗の発火タイミングが悪いのか投げた後のカーソルを保存してしまう、負荷も考慮すると最悪の選択肢
 
 ## License
-
-NoDrop Version 1.0.2 is under [Mit license](https://en.wikipedia.org/wiki/MIT_License).
 
 ## Author
 
