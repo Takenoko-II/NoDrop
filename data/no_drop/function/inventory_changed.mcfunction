@@ -4,6 +4,9 @@
 #
 # @within advancement no_drop:inventory_changed
 
+# 進捗発火阻止用タグ
+    execute if entity @s[tag=NoDrop.AdvancementFirePreventing] run return run advancement revoke @s only no_drop:inventory_changed
+
 # クリエイティブモード・スペクテイターモードのプレイヤーは動作を保証できない
     execute unless entity @s[gamemode=!creative, gamemode=!spectator] run return run advancement revoke @s only no_drop:inventory_changed
 
@@ -11,7 +14,7 @@
     tag @s add NoDrop.Thrower
 
 # 周囲のドロップされたアイテムのうち条件を満たすものを取得
-    execute as @e[type=item, distance=..8, predicate=no_drop:is_target_item_entity] if data entity @s Thrower run tag @s add NoDrop.ItemStack
+    execute as @e[type=item, distance=..8, predicate=no_drop:is_target_item_entity, tag=!NoDrop.Exception] if data entity @s Thrower run tag @s add NoDrop.ItemStack
 
     data modify storage no_drop: trigger set value false
 
@@ -29,7 +32,9 @@
     function no_drop:save/
 
 # 条件を満たすドロップアイテムがあればドロップされた際の処理へ移動
-    execute if entity @e[type=player, tag=NoDrop.Thrower] if data storage no_drop: {trigger: true} run function no_drop:load/
+    execute if entity @e[type=player, tag=NoDrop.Thrower] if data storage no_drop: {trigger: true} store result storage no_drop: activated byte 1 run function no_drop:load/
+
+    execute if data storage no_drop: {activated: false} as @n[tag=NoDrop.ItemStack] run function no_drop:exception
 
 # リセット
     tag @s remove NoDrop.Thrower
@@ -42,6 +47,7 @@
     data remove storage no_drop: cursor
 
     data remove storage no_drop: trigger
+    data remove storage no_drop: activated
 
 # "最後に" 進捗剥奪
     advancement revoke @s only no_drop:inventory_changed

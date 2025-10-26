@@ -12,7 +12,8 @@
     execute if function no_drop:load/compare run return run function no_drop:load/finalize
 
 # 要素数0で終了
-    execute unless data storage no_drop: inventory[] run return run function no_drop:load/finalize
+    execute unless data storage no_drop: inventory[] run function no_drop:load/finalize
+    execute unless data storage no_drop: inventory[] run return fail
 
 # 次の要素の処理
-    execute if data storage no_drop: inventory[] run function no_drop:load/inventory
+    execute if data storage no_drop: inventory[] run return run function no_drop:load/inventory

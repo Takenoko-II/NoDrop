@@ -12,6 +12,7 @@
     data remove storage no_drop: slot_name
 
     data remove storage no_drop: successful
+    data remove storage no_drop: put
 
 # 成功を返す
     function no_drop:save/
