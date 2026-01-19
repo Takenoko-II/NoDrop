@@ -29,7 +29,7 @@ item modify entity @s weapon.mainhand no_drop:
 <br>インベントリがいっぱいの場合、プレイヤーの目の位置にテレポートさせ続ける仕様のため、そのままログアウトをされるとアイテムだけがそこに残る(再度ログインしてインベントリに空きを作ればいい話ではある)
 
 ## 対応バージョン
-- Java Edition 1.21.10
+- Java Edition 1.21.11
 
 ## メモ
 - 赤石愛氏「OhMyDat」を含みます(ライセンスは[ここ](/data/oh_my_dat/LICENSE))
